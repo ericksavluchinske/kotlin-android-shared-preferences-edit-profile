@@ -62,4 +62,15 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+    private fun insertSharedPreferences(inputName: String, inputRole: String){
+
+        myEditor.apply(){
+            putString("key_name",inputName)
+            putString("key_role",inputRole)
+            apply()
+        }
+
+        Toast.makeText(this,"Saved successfully",Toast.LENGTH_LONG).show()
+    }
 }
