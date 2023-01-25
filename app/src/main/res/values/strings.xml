@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">SharedPreferencesEditProfile</string>
+    <string name="app_name">Edit Profile</string>
+
+    <string name="img_profile_content_description">Profile image</string>
+
+    <string name="tv_edit_name">Name</string>
+    <string name="tv_edit_role">Role</string>
+    <string name="hint_edit_name">Type your name</string>
+    <string name="hint_edit_role">Type your role</string>
+
+    <string name="btn_save">Save</string>
 </resources>
