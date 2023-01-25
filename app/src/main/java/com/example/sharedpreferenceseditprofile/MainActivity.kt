@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var mySharedPreferences: SharedPreferences
     private lateinit var myEditor: SharedPreferences.Editor
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -20,6 +21,18 @@ class MainActivity : AppCompatActivity() {
 
         initSharedPreferences()
         showSharedPreferences()
+
+        binding.btnSave.setOnClickListener {
+
+            val name = binding.etName.text.toString()
+            val role = binding.etRole.text.toString()
+
+            if (validateInput(name,role)){
+
+                insertSharedPreferences(name,role)
+                showSharedPreferences()
+            }
+        }
     }
 
     private fun initSharedPreferences(){
