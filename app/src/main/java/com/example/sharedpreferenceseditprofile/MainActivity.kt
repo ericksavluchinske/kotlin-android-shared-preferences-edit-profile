@@ -18,11 +18,29 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
 
         initSharedPreferences()
+        showSharedPreferences()
     }
 
     private fun initSharedPreferences(){
 
         mySharedPreferences = getSharedPreferences("my_shared_preferences", MODE_PRIVATE)
         myEditor = mySharedPreferences.edit()
+    }
+
+    private fun showSharedPreferences(){
+
+        val name = mySharedPreferences.getString("key_name",null)
+        val role = mySharedPreferences.getString("key_role",null)
+
+        if (name != null && role != null){
+            binding.tvName.text = name
+            binding.tvRole.text = role
+
+            binding.etName.setText("$name")
+            binding.etRole.setText("$role")
+        }else{
+            binding.tvName.text = getString(R.string.empty_name)
+            binding.tvRole.text = getString(R.string.empty_role)
+        }
     }
 }
