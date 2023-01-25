@@ -3,6 +3,7 @@ package com.example.sharedpreferenceseditprofile
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.sharedpreferenceseditprofile.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -41,6 +42,24 @@ class MainActivity : AppCompatActivity() {
         }else{
             binding.tvName.text = getString(R.string.empty_name)
             binding.tvRole.text = getString(R.string.empty_role)
+        }
+    }
+
+    private fun validateInput(inputName: String?, inputRole: String?): Boolean{
+        return when{
+            inputName.isNullOrEmpty() -> {
+                Toast.makeText(this,"Please type your name", Toast.LENGTH_LONG).show()
+                binding.etName.requestFocus()
+                false
+            }
+            inputRole.isNullOrEmpty() -> {
+                Toast.makeText(this,"Please type your role", Toast.LENGTH_LONG).show()
+                binding.etRole.requestFocus()
+                false
+            }
+            else -> {
+                true
+            }
         }
     }
 }
