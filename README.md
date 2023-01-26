@@ -26,3 +26,9 @@ Utilizei o Figma para criar o layout do projeto.
 
 - LinkedIn: [https://www.linkedin.com/in/ericksavluchinske](https://www.linkedin.com/in/ericksavluchinske)
 - GitHub: [https://github.com/ericksavluchinske](https://github.com/ericksavluchinske)
+
+## 📝 Licença
+
+Licença [MIT](./LICENSE).
+
+Feito com ❤️ por Erick Savluchinske [Entre em contato!](https://www.linkedin.com/in/ericksavluchinske)
